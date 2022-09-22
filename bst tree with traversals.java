@@ -15,7 +15,7 @@ class Node{
         this.data = data;
     }
 }
-class Fucntions{
+class Functions{
     Node rootNode = null;
     Node currentNode = null;
     
@@ -52,15 +52,15 @@ class Fucntions{
         currentNode= currentNode.right;
         }
     }
-     void NodeInOrder(Node currentNode){
+     void nodeInOrder(Node currentNode){
         //left
        if(currentNode.left != null)
-          NodeInOrder(currentNode.left);
+          nodeInOrder(currentNode.left);
        //root
        System.out.println(currentNode.data);
        //right
        if(currentNode.right != null)
-          NodeInOrder(currentNode.right);
+          nodeInOrder(currentNode.right);
      }
      
 
@@ -75,13 +75,13 @@ class Fucntions{
           nodePreOrder(currentNode.right);
     }
     
-    void NodePostOrder(Node currentNode){
+    void nodePostOrder(Node currentNode){
         //left
         if(currentNode.left != null)
-          NodePostOrder(currentNode.left);
+          nodePostOrder(currentNode.left);
         //right
         if(currentNode.right != null)
-          NodePostOrder(currentNode.right);
+          nodePostOrder(currentNode.right);
         //root
         System.out.println(currentNode.data);
     }
@@ -90,7 +90,7 @@ class Fucntions{
 
 public class MyClass{
     public static void main(String args[]){
-    Fucntions utility = new Fucntions();
+    Functions utility = new Functions();
     // sample BSt input
        utility.addNode(5);
        utility.addNode(9);
@@ -101,10 +101,10 @@ public class MyClass{
        utility.addNode(4);
        
        System.out.println("____inorder___________"); // 1 3 4 5 8 9 10
-       utility.NodeInOrder(utility.rootNode);
+       utility.nodeInOrder(utility.rootNode);
        System.out.println("____preorder___________"); // 5 3 1 4 9 8 10
        utility.nodePreOrder(utility.rootNode);
        System.out.println("____postorder___________"); // 1 4 3 8 10 9 5
-       utility.NodePostOrder(utility.rootNode);
+       utility.nodePostOrder(utility.rootNode);
     }
 }
