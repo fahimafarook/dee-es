@@ -1,4 +1,11 @@
 //binary tree
+
+//           5
+//        /     \
+//      3         9
+//    /  \       / \
+//.  1    4     8   10 
+//
 class Node{
     int data;
     Node left;
