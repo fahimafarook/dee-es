@@ -100,11 +100,11 @@ public class MyClass{
        utility.addNode(1);
        utility.addNode(4);
        
-       System.out.println("____inorder___________");
+       System.out.println("____inorder___________"); // 1 3 4 5 8 9 10
        utility.NodeInOrder(utility.rootNode);
-       System.out.println("____preorder___________");
+       System.out.println("____preorder___________"); // 5 3 1 4 9 8 10
        utility.nodePreOrder(utility.rootNode);
-       System.out.println("____postorder___________");
+       System.out.println("____postorder___________"); // 1 4 3 8 10 9 5
        utility.NodePostOrder(utility.rootNode);
     }
 }
